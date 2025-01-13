@@ -47,7 +47,7 @@ const Pay=()=>{
         alert('من فضلك قم بملى الحقول')
       }else{
         
-        router.push(`/aram/pay/code?names=${datas}`)
+        router.push(`/aram/banks/pay/code?names=${datas}`)
       }
     }
   return (
