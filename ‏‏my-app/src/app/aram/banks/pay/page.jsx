@@ -6,8 +6,7 @@ import mada from '../../../../../public/mada.png'
 import Image from 'next/image'
 import {useState} from 'react'
 import { useRouter,useSearchParams } from 'next/navigation'
-import TeleSned from '../../../../server/TeleSend'
-
+import TeleSned from '@/server/TeleSned'
 
 const Pay=()=>{
   const {Send} = TeleSned();
